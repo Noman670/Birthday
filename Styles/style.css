@@ -1,0 +1,135 @@
+body{
+    text-align: center;
+    background-color: #B7E5DD;
+}
+
+h1,h2,h3,h4{
+    color: rgb(83,75,75);
+    font-family: 'Oswald',sans-serif;
+    font-weight: bold;
+}
+
+#D3{
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;  
+    border: solid;
+    border-radius: 100px;
+}
+
+p{
+    font-family: 'Fira Sans',sans-serif;
+    font-size: large;
+    margin-left: 130px;
+    margin-right: 130px;
+    color: rgb(83,75,75);
+}
+
+a:hover{
+    color: blueviolet;
+}
+
+ol{
+    list-style: none;
+    width: 500px;
+    margin: 32px auto 0 auto;
+    padding: 0;
+}
+
+li{
+    padding: 16px;
+    margin: 40px;
+    background-color: #C2DED1;
+}
+
+.list{
+    font-size: x-large;
+}
+
+.wrapper{
+    position: relative;
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    perspective: 1000px;
+    margin-bottom: 500px;
+}
+
+.img-area{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateY(-360deg) translateZ(-300px);
+    animation: animate 25s steps(1000,end) infinite;
+}
+
+.single-img{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    top: 10px;
+    left: 10px; 
+}
+
+.single-img img{
+    width: 300px;
+    height: 200px;
+    border: 5px solid #fff;    
+}
+
+.single-img.img-one{
+    transform: rotateY(0deg) translateZ(300px);
+}
+
+.single-img.img-two{
+    transform: rotateY(60deg) translateZ(300px);
+}
+
+.single-img.img-three{
+    transform: rotateY(120deg) translateZ(300px);
+}
+
+.single-img.img-four{
+    transform: rotateY(180deg) translateZ(300px);
+}
+
+.single-img.img-five{
+    transform: rotateY(240deg) translateZ(300px);
+}
+
+.single-img.img-six{
+    transform: rotateY(300deg) translateZ(300px);
+}
+
+img{
+    filter: grayscale(90%);
+    transition: 1s;
+    cursor: pointer;
+}
+
+img:hover{
+    transition: 1s;
+    filter: grayscale(0);
+}
+
+@keyframes animate{
+    from{
+        transform: rotateY(-360deg);
+    }
+    to{
+        transform: rotateY(0deg);
+    }
+}
+
+.end{
+    margin-top: 300px;
+}
+
+hr{
+    width: 60%;
+    border: 1px dashed black;
+}
